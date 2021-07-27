@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - cashocs-convert = cashocs._cli:convert
   script: {{ PYTHON }} -m pip install . -vv
@@ -28,6 +28,7 @@ requirements:
     - meshio >=4.1.0
     - pytest >=6.0.0
     - python >=3.6
+    - gmsh >=4.8
     - fenics {{ fenics_version }}
 
 test:
