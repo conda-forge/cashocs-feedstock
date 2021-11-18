@@ -30,7 +30,6 @@ requirements:
     - python >=3.6
     - gmsh >=4.8
     - fenics {{ fenics_version }}
-    - superlu_dist <=7.1.1
 
 test:
   imports:
