@@ -12,6 +12,7 @@ source:
   sha256: 2d47cc444187b994863fd5157de4f583dd8775126897c17c0b30d2ed0a6f329d
 
 build:
+  skip: true  # [win]
   number: 1
   entry_points:
     - cashocs-convert = cashocs._cli:convert
