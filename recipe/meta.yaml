@@ -12,8 +12,8 @@ source:
   sha256: 2d47cc444187b994863fd5157de4f583dd8775126897c17c0b30d2ed0a6f329d
 
 build:
-  skip: true  # [win]
-  number: 1
+  noarch: python
+  number: 2
   entry_points:
     - cashocs-convert = cashocs._cli:convert
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,13 +21,13 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
   run:
     - deprecated >=1.2.10
     - matplotlib-base
     - meshio >=4.1.0
     - pytest >=6.0.0
-    - python
+    - python >=3.6
     - gmsh >=4.8
     - fenics {{ fenics_version }}
 
