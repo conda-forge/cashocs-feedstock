@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - cashocs-convert = cashocs._cli:convert
   script: {{ PYTHON }} -m pip install . -vv
@@ -29,6 +29,7 @@ requirements:
     - pytest >=6.0.0
     - python >=3.7
     - gmsh >=4.8
+    - typing_extensions
     - fenics {{ fenics_version }}
 
 test:
