@@ -1,5 +1,5 @@
 {% set name = "cashocs" %}
-{% set version = "1.8.10" %}
+{% set version = "1.8.11" %}
 {% set fenics_version = "2019.1.*" %}
 
 
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cashocs-{{ version }}.tar.gz
-  sha256: 69abfce4ec700e4d9d6aba9d23cd609cdd787b24fc56e888b181db082e0c7d98
+  sha256: 2205d601688316e0ba2af5116b8308262b4cb2ea47a875bac7b8e06b37c1fced
 
 build:
   noarch: python
