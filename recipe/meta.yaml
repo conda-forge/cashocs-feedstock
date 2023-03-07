@@ -30,6 +30,7 @@ requirements:
     - typing_extensions
     - openssh
     - fenics {{ fenics_version }}
+    - imath <=3.1.6
 
 test:
   imports:
