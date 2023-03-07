@@ -1,11 +1,11 @@
-About cashocs
-=============
+About cashocs-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cashocs-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/sblauth/cashocs
 
 Package license: GPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cashocs-feedstock/blob/main/LICENSE.txt)
 
 Summary: Computational Adjoint-Based Shape Optimization and Optimal Control Software
 
