@@ -1,5 +1,5 @@
 {% set name = "cashocs" %}
-{% set version = "1.8.12" %}
+{% set version = "2.0.0" %}
 {% set fenics_version = "2019.1.*" %}
 
 
@@ -9,11 +9,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/cashocs-{{ version }}.tar.gz
-  sha256: c1d53e9e519feb62caeaee6d02fee9e89a60848c27b0896ba008ba53ff4456f8
+  sha256: 2b80de87eeb8ca3c703bdc4f190d32618d3152c5b9ac4b420af9202ec061a44a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - cashocs-convert = cashocs._cli:convert
   script: {{ PYTHON }} -m pip install . -vv
