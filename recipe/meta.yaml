@@ -13,9 +13,10 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - cashocs-convert = cashocs._cli:convert
+    - cashocs-extract_mesh = cashocs._cli:extract_mesh
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -23,14 +24,13 @@ requirements:
     - pip
     - python >=3.7
   run:
-    - numpy >=1.21.0
-    - meshio >=4.1.0
-    - python >=3.7
+    - numpy >=1.24.0
+    - meshio >=5.3.0
+    - python >=3.8
     - gmsh >=4.8
     - typing_extensions
     - openssh
     - fenics {{ fenics_version }}
-    - imath <=3.1.6
     - petsc <=3.19
 
 test:
