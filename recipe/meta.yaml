@@ -16,7 +16,6 @@ build:
   number: 2
   entry_points:
     - cashocs-convert = cashocs._cli:convert
-    - cashocs-extract_mesh = cashocs._cli:extract_mesh
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -39,7 +38,6 @@ test:
     - cashocs._cli
   commands:
     - cashocs-convert --help
-    - cashocs-extract_mesh --help
 
 about:
   home: https://github.com/sblauth/cashocs
