@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   entry_points:
     - cashocs-convert = cashocs._cli:convert
     - cashocs-extract_mesh = cashocs._cli:extract_mesh
@@ -22,10 +22,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
-    - numpy >=1.24.0
-    - meshio >=5.3.0
+    - numpy
+    - meshio >=4.1.0
     - python >=3.8
     - gmsh >=4.8
     - typing_extensions
@@ -39,6 +39,7 @@ test:
     - cashocs._cli
   commands:
     - cashocs-convert --help
+    - cashocs-extract_mesh --help
 
 about:
   home: https://github.com/sblauth/cashocs
