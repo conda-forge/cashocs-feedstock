@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 3
+  number: 4
   entry_points:
     - cashocs-convert = cashocs._cli:convert
   script: {{ PYTHON }} -m pip install . -vv
@@ -31,7 +31,6 @@ requirements:
     - openssh
     - fenics {{ fenics_version }}
     - petsc <=3.19
-    - mpi4py <=3.1.4
 
 test:
   imports:
