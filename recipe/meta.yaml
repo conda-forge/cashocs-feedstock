@@ -31,6 +31,7 @@ requirements:
     - openssh
     - fenics {{ fenics_version }}
     - petsc <=3.19
+    - matplotlib
 
 test:
   imports:
