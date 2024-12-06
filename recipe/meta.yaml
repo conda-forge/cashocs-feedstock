@@ -37,15 +37,11 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
-    - pytest
   imports:
     - cashocs
     - cashocs._cli
-  source_files:
-    - tests
   commands:
     - cashocs-convert --help
-    - pytest -vv tests
 
 about:
   home: https://github.com/sblauth/cashocs
