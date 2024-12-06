@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   entry_points:
     - cashocs-convert = cashocs._cli:convert
   script: {{ PYTHON }} -m pip install . -vv
@@ -30,7 +30,6 @@ requirements:
     - typing_extensions
     - openssh
     - fenics {{ fenics_version }}
-    - scotch <7
     - matplotlib-base
     - scipy
 
@@ -38,8 +37,13 @@ test:
   imports:
     - cashocs
     - cashocs._cli
+  requires:
+    - pytest
+  source_files:
+    - tests
   commands:
     - cashocs-convert --help
+    - pytest -vv tests
 
 about:
   home: https://github.com/sblauth/cashocs
