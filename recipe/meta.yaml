@@ -11,8 +11,6 @@ source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cashocs-{{ version }}.tar.gz
   sha256: 34c2cd9e6805e7d1c964876b51ff959db10ad586b2c61c53591d8b473ff5516c
 
-# newline for rerun
-
 build:
   noarch: python
   number: 1
