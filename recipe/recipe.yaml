@@ -36,6 +36,8 @@ requirements:
     - fenics ${{ fenics_version }}
     - matplotlib-base
     - scipy
+    - libblas * *openblas
+    - liblapack * *openblas
 
 tests:
   - python:
