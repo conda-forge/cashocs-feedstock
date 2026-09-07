@@ -1,0 +1,66 @@
+schema_version: 1
+
+context:
+  name: cashocs
+  version: "2.10.1"
+  fenics_version: 2019.1.*
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/cashocs-${{ version }}.tar.gz
+  sha256: 48a3ba0a5241d04e0843f3f82b3557eaeb3c99fa74a16a18b4ad7be3f1d1dbbc
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - cashocs-convert = cashocs._cli:convert
+
+requirements:
+  host:
+    - pip
+    - setuptools
+    - python ${{ python_min }}.*
+  run:
+    - numpy
+    - meshio >=4.1.0
+    - python >=${{ python_min }}
+    - gmsh >=4.8
+    - typing_extensions
+    - openssh
+    - fenics ${{ fenics_version }}
+    - matplotlib-base
+    - scipy
+
+tests:
+  - python:
+      imports:
+        - cashocs
+        - cashocs._cli
+      pip_check: false
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      - cashocs-convert --help
+
+about:
+  summary: Computational Adjoint-Based Shape Optimization and Optimal Control Software
+  license: GPL-3.0-or-later
+  license_file: COPYING
+  description: cashocs is a software for automatically solving PDE constrained shape optimization and optimal control problems.
+  homepage: https://github.com/sblauth/cashocs
+  repository: https://github.com/sblauth/cashocs
+  documentation: https://cashocs.readthedocs.io/en/stable/
+
+extra:
+  recipe-maintainers:
+    - sblauth

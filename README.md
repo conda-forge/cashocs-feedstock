@@ -196,6 +196,3 @@ Feedstock Maintainers
 
 * [@sblauth](https://github.com/sblauth/)
 
-
-<!-- dummy commit to enable rerendering -->
-
