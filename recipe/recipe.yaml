@@ -40,19 +40,19 @@ requirements:
     - liblapack * *openblas
 
 tests:
-  - python:
-      imports:
-        - cashocs
-        - cashocs._cli
-      pip_check: false
-      python_version:
-        - ${{ python_min }}.*
-        - "*"
-  - requirements:
+  - script:
+    - python -c "import cashocs;print(cashocs.__version__)"
+    - cashocs-convert --help
+    requirements:
       run:
         - python ${{ python_min }}.*
-    script:
-      - cashocs-convert --help
+        
+  - script:
+    - python -c "import cashocs;print(cashocs.__version__)"
+    - cashocs-convert --help
+    requirements:
+      run:
+        - python
 
 about:
   summary: Computational Adjoint-Based Shape Optimization and Optimal Control Software
