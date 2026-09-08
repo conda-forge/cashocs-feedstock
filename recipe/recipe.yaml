@@ -46,7 +46,7 @@ tests:
   - script:
     - python -c "import cashocs;print(cashocs.__version__)"
     - cashocs-convert --help
-    - pytest tests/ -vv
+    - pytest gh_source/tests/ -vv
     requirements:
       run:
         - python ${{ python_min }}.*
@@ -58,7 +58,7 @@ tests:
   - script:
     - python -c "import cashocs;print(cashocs.__version__)"
     - cashocs-convert --help
-    - pytest tests/ -vv
+    - pytest gh_source/tests/ -vv
     requirements:
       run:
         - python
