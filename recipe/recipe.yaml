@@ -43,16 +43,26 @@ tests:
   - script:
     - python -c "import cashocs;print(cashocs.__version__)"
     - cashocs-convert --help
+    - pytest tests/ -vv
     requirements:
       run:
         - python ${{ python_min }}.*
+        - pytest
+    files:
+      source:
+        - tests/
         
   - script:
     - python -c "import cashocs;print(cashocs.__version__)"
     - cashocs-convert --help
+    - pytest tests/ -vv
     requirements:
       run:
         - python
+        - pytest
+    files:
+      source:
+        - tests/
 
 about:
   summary: Computational Adjoint-Based Shape Optimization and Optimal Control Software
