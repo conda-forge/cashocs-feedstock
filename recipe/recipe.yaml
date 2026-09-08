@@ -10,9 +10,12 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/cashocs-${{ version }}.tar.gz
-  sha256: 48a3ba0a5241d04e0843f3f82b3557eaeb3c99fa74a16a18b4ad7be3f1d1dbbc
-
+  - url: https://files.pythonhosted.org/packages/source/${{ name[0] }}/${{ name }}/cashocs-${{ version }}.tar.gz
+    sha256: 48a3ba0a5241d04e0843f3f82b3557eaeb3c99fa74a16a18b4ad7be3f1d1dbbc
+  - url: https://github.com/sblauth/cashocs/archive/refs/tags/v${{ version }}.tar.gz
+    sha256: 36edd06e46920dfec6adc0b80973320adf35635afe07c854f283faee63c0df04
+    target_directory: gh_source
+  
 build:
   number: 1
   noarch: python
@@ -50,7 +53,7 @@ tests:
         - pytest
     files:
       source:
-        - tests/
+        - gh_source/tests/
         
   - script:
     - python -c "import cashocs;print(cashocs.__version__)"
@@ -62,7 +65,7 @@ tests:
         - pytest
     files:
       source:
-        - tests/
+        - gh_source/tests/
 
 about:
   summary: Computational Adjoint-Based Shape Optimization and Optimal Control Software
