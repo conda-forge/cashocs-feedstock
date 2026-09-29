@@ -33,12 +33,9 @@ requirements:
     - python >=${{ python_min }}
     - gmsh >=4.8
     - typing_extensions
-    - openssh
     - fenics ${{ fenics_version }}
     - matplotlib-base
     - scipy >= 1.10.0
-    - libblas * *openblas
-    - liblapack * *openblas
     - typer
 
 tests:
