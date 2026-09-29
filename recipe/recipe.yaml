@@ -19,13 +19,13 @@ build:
   script: ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
-      - cashocs-convert = cashocs._cli:convert
-      - cashocs-extract_mesh = cashocs._cli:extract_mesh
+      - cashocs-convert = cashocs._cli._convert:app
+      - cashocs-extract-mesh = cashocs._cli._extract_mesh:app
 
 requirements:
   host:
     - pip
-    - setuptools
+    - setuptools >=61
     - python ${{ python_min }}.*
   run:
     - numpy
@@ -36,9 +36,10 @@ requirements:
     - openssh
     - fenics ${{ fenics_version }}
     - matplotlib-base
-    - scipy
+    - scipy >= 1.10.0
     - libblas * *openblas
     - liblapack * *openblas
+    - typer
 
 tests:
   - script:
