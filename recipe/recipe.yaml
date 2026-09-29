@@ -35,7 +35,7 @@ requirements:
     - typing_extensions
     - fenics ${{ fenics_version }}
     - matplotlib-base
-    - scipy >= 1.10.0
+    - scipy >=1.10.0
     - typer
 
 tests:
