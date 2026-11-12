@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: cashocs
-  version: "2.11.0"
+  version: "2.11.1"
   fenics_version: 2019.1.*
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   - url: https://github.com/sblauth/cashocs/archive/refs/tags/v${{ version }}.tar.gz
-    sha256: 28d3840b9434f03162ebb0db4f4d65572be7d3974f7f7704107b50fceddfbc5a
+    sha256: 399bc8789d2a1b569d8dbf469cec1a66c4c0a4fc27de4bedcdd191a9cb17bb82
 
 build:
   number: 0
